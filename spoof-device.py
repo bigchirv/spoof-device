@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# See the original script at https://github.com/beniwtv/evdev-spoof-device
+# Read https://github.com/starcitizen-lug/knowledge-base/wiki/Sticks,-Throttles,-&-Pedals
+#
 import evdev
 import sys
 from evdev import ecodes
@@ -62,4 +65,3 @@ print("Mirroring events. Press Ctrl-C twice to exit.")
 for event in device.read_loop():
     spoofDevice.write_event(event)
     spoofDevice.syn()
-
